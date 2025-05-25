@@ -150,38 +150,3 @@ async def ask_question_on_document(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"An error occurred while trying to answer the question: {str(e)}"
         )
-
-    # if not db_document.text_content_path or not os.path.exists(db_document.text_content_path):
-    #     raise HTTPException(
-    #         status_code=status.HTTP_404_NOT_FOUND,
-    #         detail="Extracted text content for this document not found."
-    #     )
-
-    # # 2. Load the extracted text content
-    # try:
-    #     with open(db_document.text_content_path, "r", encoding="utf-8") as f:
-    #         document_text = f.read()
-    # except Exception as e:
-    #     print(f"Error reading text file {db_document.text_content_path}: {e}")
-    #     raise HTTPException(
-    #         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-    #         detail="Could not read document content."
-    #     )
-
-    # if not document_text.strip():
-    #     # If the file exists but is empty or only whitespace
-    #     return document_schema.AnswerResponse(answer="The document content appears to be empty.")
-
-
-    # # 3. Get answer using the Q&A service
-    # question = request_body.question
-    # try:
-    #     answer = qa_service.get_answer_from_document(document_text, question)
-    #     return document_schema.AnswerResponse(answer=answer)
-    # except Exception as e:
-    #     # This is a general catch-all. qa_service might handle some errors internally.
-    #     print(f"Unhandled error in Q&A service call: {e}")
-    #     raise HTTPException(
-    #         status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-    #         detail=f"An error occurred while trying to answer the question: {str(e)}"
-    #     )

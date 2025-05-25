@@ -31,10 +31,7 @@ class ChatMessage(BaseModel):
 
 class QuestionRequest(BaseModel):
     question: str
-    # chat_history is a list of previous Q&A pairs from the frontend
-    # LangChain's memory often expects a list of BaseMessage objects,
-    # but receiving a simpler structure and converting it is fine.
-    # Let's expect a list of {'role': '...', 'content': '...'}
+    # chat history to maintain context
     chat_history: Optional[List[ChatMessage]] = Field(default_factory=list)
 
 class AnswerResponse(BaseModel):
@@ -43,4 +40,4 @@ class AnswerResponse(BaseModel):
     # source_documents: Optional[List[Dict[str, Any]]] = None
 
     class Config:
-        from_attributes = True # Replaces orm_mode in Pydantic v2
+        from_attributes = True 

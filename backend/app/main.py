@@ -25,7 +25,7 @@ app = FastAPI(
 origins = [
     "http://localhost:5173",  # Default React dev server
     "http://127.0.0.1:5173",
-    # Add other origins if your frontend runs elsewhere
+    "https://ai-chatbot-black-one.vercel.app/"
 ]
 
 app.add_middleware(
@@ -42,18 +42,3 @@ async def read_root():
 
 # Include routers
 app.include_router(upload_router.router)
-
-# Optional: A simple endpoint to test Gemini LLM integration (can be removed later)
-# from langchain_google_genai import ChatGoogleGenerativeAI
-# import os
-# @app.get("/test-gemini", tags=["LLM Test"])
-# async def test_gemini():
-#     try:
-#         api_key = os.getenv("GOOGLE_API_KEY")
-#         if not api_key:
-#             return {"error": "GOOGLE_API_KEY not found"}
-#         llm = ChatGoogleGenerativeAI(model="gemini-pro", google_api_key=api_key, convert_system_message_to_human=True)
-#         response = await llm.ainvoke("Tell me a short joke about AI.")
-#         return {"joke": response.content}
-#     except Exception as e:
-#         return {"error": str(e)}
