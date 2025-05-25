@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.pdf
+pdf_qna_app.db
+.txt
+.env
+uploaded_pdfs/
+extracted_texts/
+chroma_db_data/
+
+

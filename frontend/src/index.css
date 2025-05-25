@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  /* Custom Colors */
+  --color-brand-primary: #0FA958;
+  --color-brand-primary-dark: #248a4d;
+  --color-brand-secondary: #8b5cf6;
+  --color-background-main: #f9fafb;
+  --color-background-header: #1f2937;
+  --color-background-input: #ffffff;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-on-primary: #ffffff;
+  --color-border-light: #e5e7eb;
+  --color-border-medium: #d1d5db;
+
+  /* Custom Border Radius */
+  --radius-chat-bubble: 1.25rem;
+}
+
+body {
+  @apply bg-background-main text-text-primary;
+}
