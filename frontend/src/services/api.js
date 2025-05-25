@@ -4,7 +4,7 @@ import axios from 'axios';
 // You can set REACT_APP_API_BASE_URL in a .env file for your frontend project
 // (e.g., REACT_APP_API_BASE_URL=http://localhost:8000/api/v1)
 // Fallback to a default if not set.
-const API_BASE_URL = 'http://localhost:8000/api/v1';
+const API_BASE_URL  = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
 
 // Create an Axios instance with default configurations
 const apiClient = axios.create({
