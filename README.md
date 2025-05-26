@@ -2,7 +2,7 @@
 
 This project is a full-stack application that allows users to upload PDF documents and ask questions regarding their content. The backend processes these documents using natural language processing (NLP) with LangChain and Google's Gemini model, and a React frontend provides an interactive chat interface.
 
-**Live Demo (if applicable):** [Link to your live demo]
+**Live Demo (if applicable):** https://ai-chatbot-black-one.vercel.app/
 
 **Features:**
 
