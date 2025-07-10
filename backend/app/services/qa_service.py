@@ -63,8 +63,7 @@ def generate_answer_node(state: RAGLangGraphState):
     rag_prompt_template = ChatPromptTemplate.from_messages([
         ("system", (
             "You are a helpful assistant. Use the following pieces of context to answer the user's question. "
-            "If you don't know the answer from the provided context, just say that you don't know. "
-            "Don't try to make up an answer. Keep your answer concise.\n\n"
+            "Keep your answer concise.\n\n"
             "Context:\n{context}"
         )),
         MessagesPlaceholder(variable_name="messages")
