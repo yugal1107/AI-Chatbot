@@ -12,11 +12,9 @@ const Header = ({
     <header className="text-white p-3 sm:p-4 flex items-center justify-between shadow-black ">
       <div className="flex items-center">
         {/* Placeholder for Logo */}
-        <img
-          src="/LogoWithName.png"
-          alt="Planet AI Logo"
-          className="h-8 sm:h-10 mr-3"
-        />
+        <div className="flex items-center text-lg sm:text-xl font-semibold text-brand-primary cursor-pointer">
+          AI PDF Q&A
+        </div>
         {/* <span className="font-semibold text-lg sm:text-xl">planet</span> */}
       </div>
       <div className="flex items-center space-x-3 sm:space-x-4">
@@ -29,7 +27,9 @@ const Header = ({
             {/* Replace with actual icon */}
             <span>{currentDocumentName}</span>
           </div>
-        ) : (<></>)}
+        ) : (
+          <></>
+        )}
         <Button
           onClick={onUploadClick}
           variant="outline"

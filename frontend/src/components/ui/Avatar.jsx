@@ -16,7 +16,7 @@ const Avatar = ({ initial, type = "user", size = "md" }) => {
         initial.toUpperCase()
       ) : (
         <img
-          src="/Logo.png"
+          src="/Logo.avif"
           alt="avatar placeholder"
           className="w-full h-full rounded-full object-cover"
         />
