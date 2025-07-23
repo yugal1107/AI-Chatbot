@@ -26,3 +26,7 @@ const Avatar = ({ initial, type = "user", size = "md" }) => {
 };
 
 export default Avatar;
+
+
+
+
